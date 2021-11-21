@@ -14,5 +14,6 @@ import ColorPallet from '@/components/ColorPallet.vue'
   <color-pallet/>
   <div class="p-5">
     <a class="underline" href="https://slimani.dev">Mohamed Slimani</a>
+    <a class="underline" href="https://github.com/moh-slimani/tailwind-css-color-matcher">GitGub</a>
   </div>
 </template>

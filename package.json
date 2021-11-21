@@ -4,9 +4,8 @@
   "license": "MIT",
   "homepage": "https://moh-slimani.github.io/tailwind-css-color-matcher/",
   "repository": {
-    "url": "",
-    "directory": "",
-    "type": ""
+    "url": "https://github.com/moh-slimani/tailwind-css-color-matcher",
+    "type": "git"
   },
   "author": {
     "name": "Mohamed Slimani",
