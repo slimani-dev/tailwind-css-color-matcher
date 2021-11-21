@@ -5,8 +5,8 @@ put your Hex Code here and edit the ranges to find the closes match to your colo
 
 
 
-I'm using the HSL value to compare and find the best match for the color you are looking for
-The Background of the result section will use the input value and a color, this will help you compare visually to see
+I'm using the HSL value to compare and find the best match for the color you are looking for. 
+The Background of the result section will use the input value as color, this will help you compare visually to see the best match
 
 ![](./public/screen-shot.png)
 

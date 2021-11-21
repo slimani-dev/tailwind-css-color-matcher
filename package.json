@@ -2,6 +2,12 @@
   "name": "tailwind-color-matcher",
   "version": "0.0.1",
   "license": "MIT",
+  "homepage": "https://moh-slimani.github.io/tailwind-css-color-matcher/",
+  "repository": {
+    "url": "",
+    "directory": "",
+    "type": ""
+  },
   "author": {
     "name": "Mohamed Slimani",
     "email": "mohamed@slimani.dev",

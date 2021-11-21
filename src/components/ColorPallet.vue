@@ -115,7 +115,7 @@ const rgb2hsl = ([r, g, b]) => {
 }
 
 const hex2rgb = (hex) => {
-  let v = hex.replace('#', '')
+  let v = hex.toString().replace('#', '')
   if (v.length === 3) v =
       v.substring(0, 1) + v.substring(0, 1) +
       v.substring(1, 2) + v.substring(1, 2) +
@@ -146,7 +146,7 @@ const colors = reactive([
   }
 ])
 
-Object.keys(tailwindColors).filter(k => k !== 'black' && k !== 'white' && k !== 'lightBlue').forEach(name => {
+Object.keys(tailwindColors).filter(k => k !== 'black' && k !== 'white' && k !== 'lightBlue' && k !== 'default').forEach(name => {
   const values = []
   Object.keys(tailwindColors[name]).forEach(key => {
     values.push({
@@ -168,7 +168,7 @@ const colorInfo = computed(() => {
 
   if (value.match('^#?([0-9a-f]{3}){1,2}$')) {
     valid = true
-    hex = '#' + value.replace('#', '')
+    hex = '#' + value.toString().replace('#', '')
     rgb = hex2rgb(hex)
     hsl = rgb2hsl(rgb)
   }
@@ -194,9 +194,7 @@ const bestMatches = computed(() => {
       return (smallestHD - hRange.value) <= colorInfo.value.hsl[0] && colorInfo.value.hsl[0] <= (largestHD + hRange.value)
     })
     matches = matches.map(color => {
-      console.log('first map', JSON.parse(JSON.stringify(color.values)))
       const values = color.values.filter(value => {
-        console.log(JSON.stringify([Math.abs(value.hsl[1] - colorInfo.value.hsl[1]) <= sRange, value.hsl[1].toString(), colorInfo.value.hsl[1].toString(), sRange.value]))
         return Math.abs(value.hsl[1] - colorInfo.value.hsl[1]) <= sRange.value
       })
 
@@ -205,9 +203,7 @@ const bestMatches = computed(() => {
         values
       }
     }).map(color => {
-      console.log('second map', color.values)
       const values = color.values.filter(value => {
-        console.log(Math.abs(value.hsl[2] - colorInfo.value.hsl[2]))
         return Math.abs(value.hsl[2] - colorInfo.value.hsl[2]) <= lRange.value
       })
 
@@ -216,9 +212,7 @@ const bestMatches = computed(() => {
         values
       }
     }).map(color => {
-      console.log('second map', color.values)
       const values = color.values.filter(value => {
-        console.log(Math.abs(value.hsl[0] - colorInfo.value.hsl[0]))
         return Math.abs(value.hsl[0] - colorInfo.value.hsl[0]) <= hRange.value
       })
 

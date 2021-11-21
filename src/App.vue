@@ -8,7 +8,7 @@ import ColorPallet from '@/components/ColorPallet.vue'
     <div class="py-10">
       <p>put your Hex Code here and edit the ranges to find the closes match to your color from the tailwind css color pallet</p>
       <p>I'm using the HSL value to compare and find the best match for the color you are looking for</p>
-      <p>The Background of the result section will use the input value and a color, this will help you compare visually to see</p>
+      <p>The Background of the result section will use the input value as color, this will help you compare visually to see the best match</p>
     </div>
   </div>
   <color-pallet/>
