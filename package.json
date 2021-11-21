@@ -1,0 +1,26 @@
+{
+  "name": "tailwind-color-matcher",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": {
+    "name": "Mohamed Slimani",
+    "email": "mohamed@slimani.dev",
+    "url": "https://slimani.dev"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "deploy": "node scripts/gh-pages-deploy.js"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.3.11",
+    "tailwindcss": "^2.2.19",
+    "vue": "^3.2.16"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.9.3",
+    "vite": "^2.6.4"
+  }
+}
