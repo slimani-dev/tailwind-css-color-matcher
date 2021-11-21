@@ -1,7 +1,20 @@
-# Vue 3 + Vite
+# Tailwind CSS color matcher
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-## Recommended IDE Setup
+put your Hex Code here and edit the ranges to find the closes match to your color from the tailwind css color pallet,
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+
+
+I'm using the HSL value to compare and find the best match for the color you are looking for
+The Background of the result section will use the input value and a color, this will help you compare visually to see
+
+![](./public/screen-shot.png)
+
+
+## Licence
+
+- MIT
+
+## Author
+
+- [Mohamed Slimani](https://slimani.dev)
