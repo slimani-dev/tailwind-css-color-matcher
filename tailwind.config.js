@@ -4,9 +4,9 @@ const {
     orange, pink, violet, indigo, roze
 } = require('tailwindcss/colors')
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-    purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-    darkMode: false, // or 'media' or 'class'
+    content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
     theme: {
         colors: { white, indigo, blue, green, yellow, orange, pink, violet, gray, red, black, roze },
         extend: {}
