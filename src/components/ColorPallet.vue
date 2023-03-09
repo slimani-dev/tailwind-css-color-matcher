@@ -146,20 +146,22 @@ const colors = reactive([
   }
 ])
 
-Object.keys(tailwindColors).filter(k => k !== 'black' && k !== 'white' && k !== 'lightBlue' && k !== 'default').forEach(name => {
-  const values = []
-  Object.keys(tailwindColors[name]).forEach(key => {
-    values.push({
-      key,
-      hex: tailwindColors[name][key],
-      hsl: rgb2hsl(hex2rgb(tailwindColors[name][key]))
-    })
-  })
+Object.keys(tailwindColors)
+    .filter(k => k !== 'black' && k !== 'white' && k !== 'inherit' && k !== 'default' && k !== 'current' && k !== 'transparent')
+    .forEach(name => {
+      const values = []
+      Object.keys(tailwindColors[name]).forEach(key => {
+        values.push({
+          key,
+          hex: tailwindColors[name][key],
+          hsl: rgb2hsl(hex2rgb(tailwindColors[name][key]))
+        })
+      })
 
-  colors.push({
-    name, values
-  })
-})
+      colors.push({
+        name, values
+      })
+    })
 
 const colorInfo = computed(() => {
 
